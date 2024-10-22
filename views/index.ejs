@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Video </title>
+    <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body data-bs-theme="dark">
+    <%- include('partials/navbar') %>
+
+        <div class="container">
+           <div class="row mt-3">
+            <% data.map((val,index)=>{ %>
+                <div class="col-4">
+                    <div class="card my-3" style="width: 22rem; height: fit-content;">
+                        <div class=" ">
+                            <img src="<%= val.img %>" class="card-img-top img-fluid
+                            " alt="<%= val.title %>">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= val.title %>
+                            </h5>
+                            <p class="card-text">
+                                <%= val.relisDate %>
+                            </p>
+                            <p class="card-text">
+                                <%= val.discription %>
+                            </p>
+                            <a href="/review/<%= val.id %>" class="btn btn-primary">Add Review</a>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+           </div>
+        </div>
+
+</body>
+
+</html>

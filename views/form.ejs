@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Movies</title>
+    <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body data-bs-theme="dark">
+    <%- include('partials/navbar') %>
+
+        <div class="mx-auto w-50 my-3">
+            <form action="/CreatMovie" method="post">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" class="form-control " id="title" name="title">
+                </div>
+                <div class="mb-3">
+                    <label for="movieType" class="form-label">Movie Type</label>
+                    <input type="text" class="form-control" id="movieType" name="movieType">
+                </div>
+                <div class="mb-3">
+                    <label for="img" class="form-label">Image URL</label>
+                    <input type="url" class="form-control" id="img" name="img">
+                </div>
+                <div class="mb-3">
+                    <label for="discription" class="form-label">Discription</label>
+                    <textarea name="discription" id="discription" class="w-100"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Release Date</label>
+                    <input type="date" class="form-control" id="date" name="relisDate">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+</body>
+
+</html>
